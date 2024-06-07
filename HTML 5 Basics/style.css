@@ -1,0 +1,18 @@
+p {
+    color: blue;
+    text-align: center;
+}
+
+.greetings {
+    color: white;
+    background-color: black;
+}
+
+.any-sty {
+    color: brown;
+}
+
+
+* {
+    margin: 0;
+}
