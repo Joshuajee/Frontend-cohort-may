@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .my-div {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                margin: 100px;
+            }  
+
+            .scale {
+                transform: scale(1.5);
+            }   
+            
+            .rotate {
+                transform: rotate(45deg);
+            }
+
+            .skew {
+                transform: skewY(-40deg);
+            }
+
+            .translate {
+                transform:  translateX(200px) translateY(200px);
+            }
+
+            .increase-width {
+                transition-property: width;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-out;
+                transition-delay: 100ms;
+            }
+
+            .increase-width:hover {
+                background-color: blue;
+                width: 400px
+            }
+
+
+            .link {
+                
+            }
+
+            .link::after {
+                
+            }
+
+      
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="my-div scale"></div>
+
+        <div class="my-div rotate"></div>
+
+        <div class="my-div skew"></div>
+
+        <!-- <div class="my-div translate"></div> -->
+
+        <div class="my-div increase-width">jhihiuhuhuh</div>
+
+        <div style="background: red; width:200px">Hello</div> 
+        <div style="transform: scale(2); background-color: blue; width: 200px">Hello 2</div>
+
+
+        <div class="links">
+            <a href="#">Go Home</a>
+            <div></div>
+        </div>
+        
+    </body>
+
+</html>

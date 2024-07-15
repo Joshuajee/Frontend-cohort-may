@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fuctions</title>
+</head>
+
+<body>
+
+    <h1 onclick="changeBg()" id="para"> This is the about page </h1>
+
+    <button onclick="greetings();">Greet</button>
+
+    <ul id="list">
+
+    </ul>
+
+    
+</body>
+
+<script>
+
+    let bgState = true
+
+
+    const para =  document.getElementById("para")
+    const list =  document.getElementById("list")
+
+
+    const greetings =  () => {
+        para.textContent =  "Good Morning"
+    }
+
+    function changeBg() {
+        if (bgState){
+            para.style.backgroundColor =  "red"
+            bgState = false
+        } else {
+            para.style.backgroundColor =  "white"
+            bgState = true
+        }
+        
+    }
+
+    for (let i = 0; i < 100; i++) {
+        list.innerHTML += `<li> Item ${i} </li>`
+    }
+    
+
+
+</script>
+
+</html>

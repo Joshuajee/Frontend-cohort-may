@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+        <style>
+
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: black;
+            }
+
+            nav {
+                display: flex;
+                background-color: white;
+                height: 80px;
+                align-items: center;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .items {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+            }
+            .items > div {
+                display: flex;
+                gap: 30px;
+            }
+
+            h1 {
+                width: 240px;
+            }
+
+            @media only screen and (max-width: 640px) {
+                .items > .link-items {
+                    background-color: white;
+                    position: fixed;
+                    height: calc(100vh - 80px);
+                    width: 280px;
+                    top: 80px;
+                    left: -280px;
+                    display: flex;
+                    flex-direction: column;
+                    transition: 0.5s;
+                    
+                }
+
+                .items {
+                    justify-content: end;    
+                }
+            }
+
+            .items > .show-menu {
+                left: 0px;
+            }
+
+
+   
+
+        </style>
+    </head>
+
+    <body>
+
+        <nav>
+
+            <h1>Logo</h1>
+
+            <div class="items">
+
+                <div id="menu" class="link-items">
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                </div>
+
+                <div onclick="toggleMenu()" class="menu">
+                    Menu
+                </div>
+
+
+            </div>
+
+        </nav>
+
+
+    </body>
+
+    <script>
+        let toggled = false
+
+        function toggleMenu() {
+            const menu = document.getElementById("menu")
+
+            if (toggled) {
+                toggled = false
+                menu.classList.remove("show-menu")
+            } else {
+                menu.classList.add("show-menu")
+                toggled = true
+            }
+        }
+    </script>
+
+</html>

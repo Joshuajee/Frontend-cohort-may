@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            <!-- @keyframes simple {
+                from {background-color: red; width: 200px;}
+                to {background-color: blue; transform: translateX(100px) translateY(100px);}
+            } -->
+
+            @keyframes simple-2 {
+                0% {background-color: red;  transform:  translateX(200px);}
+                25% {background-color: blue; transform: translateY(200px);}
+                50% {background-color: blue; transform: translateY(200px);}
+                75% {background-color: blue; transform: translateY(200px);}
+                100% {background-color: blue; transform: translateY(200px);}
+   
+            }
+
+
+            .my-div {
+                margin: 200px;
+                width: 200px;
+                height: 200px;
+                background-color: black;
+                animation-name: simple-2;
+                animation-duration: 10s;
+
+
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="my-div"></div>
+          
+        
+    </body>
+
+</html>

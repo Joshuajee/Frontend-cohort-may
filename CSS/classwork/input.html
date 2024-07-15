@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            
+            button:active {
+                color: red;
+            }
+
+            button {
+                transition: 0.5s;
+            }
+
+            button:hover {
+                transform: scale(1.2);
+            }
+
+            button:disabled {
+                color: red;
+            }
+
+            input:disabled {
+                background-color: brown;
+            }
+
+            .focus:focus {
+                outline: 1px solid blue;
+            }
+
+            .container:first-child {
+                background-color: blue;
+            }
+
+            p:first-child {
+                color: red;
+                font-size: 100px;
+            }
+
+            p:last-child {
+                color: blue;
+                font-size: 50px;
+            }
+
+            p:nth-child(2) {
+                background-color: blue;
+            }
+
+            div:first-child {
+                background-color: red;
+            }
+
+            div:nth-child(1) {
+                background-color: forestgreen;
+            }
+
+            input:checked {
+                width: 50px;
+                height: 50px;
+                outline: 2px solid green;
+            }
+
+            div:last-child {
+                background-color: olive;
+            }
+
+            .my-parag::before {
+                content: "Hello ";
+                font-size: 200px;
+
+            }
+
+            .my-parag::after {
+                content: "Bye";
+                font-size: larger;
+            }
+
+            .my-parag::first-letter {
+                background-color: green;
+            }
+
+            .paragraph::first-line {
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .paragraph::selection {
+                color: green;
+            }
+
+           input::placeholder {
+            color: red;
+           }
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+        <p> Hello</p>
+
+        <div>
+
+            <div> A</div>
+
+            <div> B</div>
+
+            <div> C </div>
+
+            <p>D</p>
+
+        </div>
+
+        <button disabled>Click Me!</button>
+
+        <input disabled type="text" /> 
+
+        <input class="focus" />
+
+        <div>
+
+
+            <div> 1</div>
+            <p>2</p>
+            <p>3</p>
+        </div>
+
+        <div> Hello</div>
+
+        <input placeholder="Enter Email" />
+        
+
+        <input checked type="checkbox" />
+
+        <p class="my-parag"> Paragraph </p>
+
+        <p class="paragraph">The lazy, The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy The lazy </p>
+
+    </body>
+
+</html>

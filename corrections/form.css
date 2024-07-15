@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+
+form {
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    margin-top: 100px;
+}
+
+h2 {
+    font-size: 48px;
+    font-style: italic;
+    text-align: center;
+    color: blue;
+}
+
+label, input, select {
+    display: block;
+    width: 100%;
+}
+
+input, select {
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+input[type="button"] {
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    border: none;
+}
+
+input[type="checkbox"] {
+    height: 18px;
+    width: 18px;
+    display: inline;
+}
+
+.check-term {
+    display: inline;
+}

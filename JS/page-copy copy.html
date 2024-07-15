@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>About</title>
+</head>
+
+<body>
+
+    <h1> This is the about page </h1>
+
+    
+</body>
+
+<script src="index.js" type="text/javascript">
+
+    const age = 15
+
+    const canVote = age >= 18 ? "NO" : "YES"
+
+    for (let i = 0; i < 100; i++) {
+        console.log("iteration: ", i)
+        if (i == 10) {
+            break;
+        }
+        console.log("DONE")
+        if (i == 5) {
+            break
+        }
+    }
+
+    console.log("NEXT")
+
+
+    for (let i = 0; i < 10; i++) {
+        console.log("Index", i)
+        if (i == 5) {
+            continue
+        }
+        console.log("no skip", i)
+    }
+
+
+    for (let i = -100; i <= 100; i++) {
+        if (i % 5) {
+            continue;
+        }
+        console.log("Number", i)
+    }
+
+    console.log(false === 0)
+    console.log(2 == "2")
+
+    let count = 0
+    while (count < 500) {
+        console.log(count)
+        count += 50;
+    }
+
+    let exit = ""
+
+
+/*
+    for (let i = 100; i > 0; i--) {
+        console.log("iteration: ", i)
+
+
+    }
+*/
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+
+        <style>
+
+            @keyframes bounce {
+                0% {
+                    background-color: red;
+                    transform: translateY(0px);
+                }
+                20% {
+                    background-color: blue;
+                    transform: translateY(-5px);
+                }
+                40% {
+                    background-color: green;
+                    transform: translateY(5px);
+                }
+                60% {
+                    background-color: blue;
+                    transform: translateY(-5px);
+                }
+                80% {
+                    background-color: red;
+                    transform: translateY(5px);
+                }
+                100% {
+                    background-color: blue;
+                    transform: translateY(-5px);
+                }
+            }
+
+
+            @keyframes bounce-2 {
+                0% {
+                    bottom: 25px;
+                }
+                25% {
+                    bottom: 30px;
+                }
+                50% {
+                    bottom: 25px;
+                }
+                75% {
+                    bottom: 20px;
+                }
+                100% {
+                    bottom: 25px;
+                }
+            }
+
+            .my-div {
+                animation-name: bounce;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+            }
+
+            .my-div-2 {
+                animation-name: bounce-2;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                position: absolute;
+                background-color: blue;
+                width: 50px;
+                height: 50px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="my-blue"> Hello World!</div>
+        <div class="normal"></div>
+
+        <div class="my-div-2"></div>
+
+    
+    </body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>About</title>
+</head>
+
+<body>
+
+    <h1> This is the about page </h1>
+
+    
+</body>
+
+<script type="text/javascript">
+
+    const score = 40
+
+    let remark = ""
+
+    if (score >= 70) {
+        console.log("A")
+        remark = "Excellent"
+    } else if (score >= 60) {
+        console.log("B")
+        remark = "Very Good"
+    } else if (score >= 50) {
+        console.log("C")
+        remark = "Pass"
+    } else {
+        console.log("F")
+        remark = "Fail"
+    }
+
+    console.log("DONE")
+    console.log(remark)
+
+    if (score >= 50) {
+        console.log("PASS")
+    } else {
+        console.log("FAIL")
+    }
+
+
+//    const password = prompt("Enter Password")
+/*
+    if (password === "12345678") {
+        alert("You can login")
+    } else {
+        alert("Wrong password")
+    }
+
+*/
+
+
+//BMI = (weight / height ** 2) * 1000
+//BMI < 18 = underweight
+//BMI > 18 < 24 = Healthy Weight
+//BMI > 24 = overweight
+
+const height = 178
+const weight = 50
+
+const BMI = ( weight / height ** 2) * 10000
+
+if (BMI < 18) 
+    console.log("Underweight")
+
+if (BMI > 18 && BMI < 24) {
+    console.log("Healthy Weight")
+    console.log("fjjfj")
+}
+
+if (BMI > 24) {
+    console.log("Over Weight")
+}
+
+
+
+if (BMI > 24) {
+    console.log("Overweight")
+} else if (BMI > 18) {
+    console.log("Healthy Weight")
+} else {
+    console.log("Underweight")
+}
+</script>
+
+</html>
