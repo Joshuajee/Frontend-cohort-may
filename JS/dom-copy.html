@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fuctions</title>
+</head>
+
+<body>
+
+    <p id="content"> 0 </p>
+
+    <button class="btn" onclick="increase()">Increase</button>
+
+    <h1 class="btn">Increase</h1>
+
+    <p>1</p>
+
+    <p>2</p>
+
+    <p>3</p>
+    
+</body>
+
+<script>
+
+    const content = document.getElementById("content")
+    const byClass  = document.getElementsByClassName("btn")
+    const byTagName = document.getElementsByTagName("p")
+
+    const queryById = document.querySelector("#content")
+    const queryByClass = document.querySelector(".btn")
+    const queryByTagName = document.querySelector("p")
+
+    const queryByClassAll = document.querySelectorAll(".btn")
+
+    content.textContent = "New Button"
+
+
+    console.log(content)
+
+    console.log(byClass)
+
+    console.log(byClass[0])
+
+    console.log(byTagName)
+
+    console.log(queryById)
+
+    console.log(queryByClass)
+
+    console.log(queryByTagName)
+
+    console.log(queryByClassAll)
+
+
+    function increase() {
+        content.textContent = Number(content.textContent) + 1 
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</html>

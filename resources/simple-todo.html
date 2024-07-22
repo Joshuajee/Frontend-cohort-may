@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <link rel="stylesheet" href="./simple-todo.css" />
+
+
+    <script>
+
+        let id = 1;
+
+
+        function remove(id) {
+
+            
+        }
+
+        function task(name, id) {
+
+            return (`
+                <li id=${id} class="item"> 
+                    <span>Name</span> 
+                    <button onclick="${remove(id)}">X</button>
+                </li>
+            `)
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const form = document.querySelector("#form")
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault()
+            })
+
+
+
+        })
+
+
+    </script>
+    
+    </head>
+
+
+    <body>
+
+        <div class="container">
+
+            <h2>Simple Todo</h2>
+
+            <form id="form" >
+
+                <input id="task" autocomplete="off"  maxlength="20" name="task" type="text" placeholder="Enter task name" />
+
+                <button id="add-task">Add Task</button>
+
+            </form>
+
+
+            <ul id="todo-list">
+
+                <li class="item"> 
+                    <span>Name</span> 
+                    <button>X</button>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </body>
+
+
+
+</html>

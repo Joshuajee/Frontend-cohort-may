@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fuctions</title>
+</head>
+
+<body>
+
+    <h1 onclick="changeBg()" id="para"> This is the about page </h1>
+
+    <button onclick="greetings();">Greet</button>
+
+    <ul id="list">
+
+    </ul>
+
+    
+</body>
+
+<script>
+
+    function add(x,y) {
+        console.log("ADD")
+        return 0
+        const z = x + y
+        console.log("DONE")
+        return z
+    }
+
+    const value = add(10, 7)
+
+    function isLongEnough(value) {
+        if (value.length >= 8) {
+            return true
+        }
+        return false
+    }
+
+
+    console.log(isLongEnough("kmfjiefjiejieieji"))
+
+    console.log(isLongEnough("kmfj"))
+
+    function calculateBMI(height, weight) {
+        return (weight / height ** 2) * 10000
+    }
+
+    console.log(calculateBMI(170, 60))
+
+    function isOverweight(height, weight) {
+        const bmi = calculateBMI(height, weight)
+        if (bmi < 24) {
+            return false
+        }
+        return true
+    }
+
+    console.log(isOverweight(170, 60))
+
+    console.log(isOverweight(170, 80))
+
+   
+
+</script>
+
+</html>

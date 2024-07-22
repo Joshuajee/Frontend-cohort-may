@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fuctions</title>
+
+    <style>
+        .yellow {
+            color: yellow;
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="input" type="text" />
+
+    <button onclick="save()">Save</button>
+
+    <p id="disp"></p>
+
+</body>
+
+<script>
+
+    const input = document.querySelector("#input")
+    const disp = document.querySelector("#disp")
+
+    function save() {
+        console.log(input.value)
+        disp.textContent = input.value
+        input.value = ""
+    }
+
+
+
+</script>
+
+</html>

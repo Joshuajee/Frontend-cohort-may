@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+h2 {
+    margin: 10px 20px;
+    text-align: center;
+    font-size: 48px;
+    font-style: italic;
+    color: blue;
+}
+
+input, label, select, button {
+    display: block;
+    width: 100%;
+}
+
+input, select {
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"], input[type="checkbox"]  {
+    height: 16px;
+    width: 16px;
+    margin: 0;
+    display: inline;
+}
+
+input[type="button"], button {
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+input[type="button"]:hover {
+    border: none;
+    outline: none;
+}
+
+.check-term {
+    display: inline;
+    line-height: 36px;
+}
+
+button {
+    height: 44px;
+}
+
+button:disabled {
+    background-color: #413d3d50;
+    color: #FFFFFF90;
+}

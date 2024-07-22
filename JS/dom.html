@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fuctions</title>
+
+    <style>
+        .yellow {
+            color: yellow;
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3> Hello </h3>
+
+    <h3 id="bye"> Bye </h3>
+
+    <img id="image" width="200" height="200" />
+
+    <p id="something">
+        Text
+        <h1>Do something</h1>
+    </p>
+
+    <button onclick="add()"> Add </button>
+
+    <button onclick="remove()"> Remove </button>
+
+    <button onclick="toggled()"> Toggle </button>
+    
+</body>
+
+<script>
+
+    const element = document.querySelector("h3")
+
+    console.log(element)
+
+    element.textContent = "Good morning"
+
+    const byeElement = document.querySelector("#bye")
+
+    byeElement.style.color =  "blue"
+
+    element.setAttribute("name", "hello h3")
+
+    const image = document.querySelector("#image")
+
+    image.setAttribute("src", "bg.png")
+
+    console.log(image)
+
+
+    const something = document.querySelector("#something")
+
+    console.log(something.textContent)
+    console.log(something.innerHTML)
+    console.log(something.innerText)
+
+
+    function add() {
+        console.log(something.classList.contains("yellow"))
+        something.classList.add("yellow")
+    }
+
+    function remove() {
+        console.log(something.classList.contains("yellow"))
+        something.classList.remove("yellow")
+    }
+
+    function toggled() {
+        something.classList.toggle("yellow")
+    }
+
+
+
+
+
+
+</script>
+
+</html>
