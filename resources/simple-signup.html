@@ -2,9 +2,7 @@
 
 <html>
     <head>
-
         <link rel="stylesheet" href="./simple-signup.css" />
-    
     </head>
 
     <body>
@@ -17,33 +15,51 @@
 
             <input id="fullname" autocomplete="off"  maxlength="20" name="fullname" type="text" placeholder="Enter your fullname" />
 
+            <p></p>
 
             <label for="email">Email:</label>
 
             <input id="email" name="email" type="email" placeholder="Enter your email" required/>
 
+            <p></p>
+
             <label for="dob">DOB:</label>
 
             <input id="dob" name="password" type="date" placeholder="Enter your DOB"/>
 
+            <p></p>
+
             <label for="state">State:</label>
 
             <select id="state" name="state">
+                <option value="none">Choose State</option>
                 <option value="lagos">Lagos</option>
                 <option value="niger">Niger</option>
                 <option value="oyo">Oyo</option>
             </select>
 
+            <p></p>
+
             <label for="password">Password:</label>
 
             <input id="password" name="password" type="password" placeholder="Enter your password"/>
+
+            <p></p>
+
+            <label for="password-confirm">Password Confirm:</label>
+
+            <input id="password-confirm" name="password-confirm" type="password" placeholder="Confirm Password"/>
+
+            <p id="pass-confirm-error"></p>
 
             <div>
                 <input type="checkbox" />
                 <label class="check-term">Terms and conditions</label>
             </div>
+
+            <p></p>
         
-            <input type="button" value="Submit" />
+            <button disabled> Submit </button>
 
         </form>
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body style="height: 1000px; overflow-y:scroll">
+
+    <button id="me">Click Me</button>
+
+
+    <input id="my-input" />
+
+
+    <div style="height: 200px; overflow-y:auto; background: red" id="container">
+
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+        <p>Hello</p>
+    </div>
+
+
+</body>
+
+<script>
+
+    const meBtn = document.getElementById("me")
+
+    const myInput = document.querySelector("#my-input")
+
+    meBtn.addEventListener("click", function (event) {
+        console.log("I am Clicking")
+        console.log(event.target)
+        event.target.style.backgroundColor = "red" 
+    })
+
+
+    myInput.addEventListener("change", function (event) {
+
+        const target = event.target
+        const value = target.value
+
+        if (value.length < 5) {
+            target.style.border = "1px solid red"
+            target.style.outline = "1px solid red"
+            //target.focus()
+        } else {
+            target.style.border = "1px solid green"
+            target.style.outline = "none"
+        }
+        console.log("change", target.value)
+    })
+
+
+    document.querySelector("#container").addEventListener("scroll", function (event) {
+
+
+    })
+
+
+
+
+
+
+</script>
+
+</html>

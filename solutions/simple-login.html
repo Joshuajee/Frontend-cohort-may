@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <link rel="stylesheet" href="./simple-signup.css" />
+
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const email = document.querySelector("#email")
+                const password = document.querySelector("#password")
+                const emailError = document.querySelector("#email-error")
+                const passwordError = document.querySelector("#pass-error")
+                const submit = document.querySelector("#submit")
+
+                const checkbox = document.querySelector("#checkbox")
+
+                const form = document.querySelector("#login")
+
+                function submitFunc(event) {
+                    console.log(event)
+                    event.preventDefault()
+                    alert("Submit")
+                }
+
+                form.addEventListener("submit", submitFunc)
+
+                checkbox.addEventListener("change", function (event) {
+                    console.log("yes")
+                    console.log(event)
+                    console.log(event.target.checked)
+                })
+
+                function noError() {
+                    if (email.value.length > 2 && password.value.length > 5) {
+                        submit.removeAttribute("disabled")
+                    } else {
+                        submit.setAttribute("disabled", true)
+                    }
+                }
+
+
+                email.addEventListener("change", function (event) {
+                    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+                    const target = event.target
+                    console.log(target.value.match(pattern))
+                    if (!target.value.match(pattern)) {
+                        target.classList.add("input-error")
+                        console.log("Error")
+                        emailError.textContent  = "Invalid Email"
+                        emailError.classList.add("error")
+                    } else {
+                        target.classList.remove("input-error")
+                        emailError.textContent  = ""
+                        console.log("No Error")
+                    }
+                    noError()
+                })
+
+
+                password.addEventListener("change", function (event) {
+                    const target = event.target
+                    if (target.value.length < 6) {
+                        target.classList.add("input-error")
+                        console.log("Error")
+                        passwordError.textContent  = "Password too short atleast 6 characters"
+                        passwordError.classList.add("error")
+                    } else {
+                        target.classList.remove("input-error")
+                        passwordError.textContent  = ""
+                        console.log("No Error")
+                    }
+                    noError()
+                })
+    
+
+            })
+    
+    
+        </script>
+    
+    </head>
+
+    <body>
+
+        <form id="login" method="get">
+
+            <h2>Login</h2>
+
+            <label for="email">Email:</label>
+
+            <input id="email" name="email-address" type="email" placeholder="Enter your email" required/>
+
+            <p id="email-error"></p>
+
+            <label for="password">Password:</label>
+
+            <input id="password" name="password-code" type="password" placeholder="Enter your password"/>
+
+            <p id="pass-error"></p>
+
+            <input id="checkbox" type="checkbox" />
+        
+            <button disabled id="submit"> Submit </button>
+
+        </form>
+
+    </body>
+
+
+
+</html
