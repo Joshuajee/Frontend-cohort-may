@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body style="height: 1000px; overflow-y:scroll">
+
+    <button id="me">Click Me</button>
+
+
+</body>
+
+<script>
+
+    const goShopping = new Promise(function(resolve, reject) {
+        setTimeout(function () {
+            resolve("Shop")
+        }, 1000)
+    }) 
+
+    const playFootball = new Promise(function(resolve, reject) {
+        setTimeout(function () {
+            resolve("Football")
+        }, 2000)
+    }) 
+
+    const swimming = new Promise(function(resolve, reject) {
+        setTimeout(function () {
+            resolve("Swimming")
+        }, 3000)
+    })
+    
+  
+    async function dailyTask() {
+
+        const shop = await goShopping
+
+        const football = await playFootball
+
+        const swim = await swimming
+
+        console.log(shop, football, swim)
+    }
+
+    async function dailyTask2() {
+        try {
+            const shop = await goShopping
+            const football = await playFootball
+            const swim = await swimming
+            console.log(shop, football, swim)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    dailyTask()
+
+    let countdown = 10
+
+    const myInterval  = setInterval(function () {
+        console.log(countdown--)
+        if (countdown ==  0) {
+            clearInterval(myInterval)
+        }
+        console.log("check")
+    }, 1000)
+
+
+</script>
+
+</html>

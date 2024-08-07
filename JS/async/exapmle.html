@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body style="height: 1000px; overflow-y:scroll">
+
+    <button id="me">Click Me</button>
+
+
+</body>
+
+<script>
+
+    const goShopping = new Promise(function(resolve, reject) {
+        setTimeout(function () {
+            console.log("Shopping")
+            resolve("Shop")
+        }, 1000)
+    }) 
+
+    const playFootball = new Promise(function(resolve, reject) {
+        setTimeout(function () {
+            console.log("Football")
+            resolve("Football")
+        }, 2000)
+    }) 
+
+    const swimming = new Promise(function(resolve, reject) {
+        setTimeout(function () {
+            console.log("Swimming")
+            resolve("Swimming")
+        }, 3000)
+    })
+    
+    goShopping.then((value) => {
+        console.log(value)
+        playFootball.then((value) => {
+            console.log(value)
+            swimming.then((value) => {
+                console.log(value)
+            })
+        })
+    })
+
+
+    //async
+    //await
+
+
+
+
+
+</script>
+
+</html>

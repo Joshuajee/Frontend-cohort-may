@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <link rel="stylesheet" href="./simple-todo.css" />
+
+
+    <script>
+
+        function remove(id) {
+            const element  = document.querySelector("#"+id)
+
+            element.classList.add("delete-transition")
+
+            setTimeout(function () {
+                element.style.display = "none"
+            }, 500)
+           
+        }
+
+        function task(name, id) {
+            return (`
+                <li id=${id} class="item"> 
+                    <span>${name}</span> 
+                    <button onclick="remove('${id}')">X</button>
+                </li>
+            `)
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const form = document.querySelector("#form")
+            const input = document.querySelector("#task")
+            const list  =  document.querySelector("#todo-list")
+
+            const todoItems = localStorage.getItem("todos")
+
+
+            if (todoItems != null) {
+                const todoItemsArray = JSON.parse(todoItems)
+                for (let i = 0; i < todoItemsArray.length; i++) {
+                    console.log(todoItemsArray[i].name)
+                    console.log(todoItemsArray[i].id)
+                    list.innerHTML += task(todoItemsArray[i].name, todoItemsArray[i].id)
+                }
+            }
+
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault() // prevent default form behavior of loading the page
+
+                const todoItems = localStorage.getItem("todos")
+  
+                list.innerHTML += task(input.value, input.value)
+
+                if (todoItems != null) {
+                    const todoItemsArray = JSON.parse(todoItems)
+                    todoItemsArray.push({ name: input.value, id: input.value})
+                    localStorage.setItem("todos", JSON.stringify(todoItemsArray))
+                } else {
+                    const item = JSON.stringify( [{ name: input.value, id: input.value}])
+                    localStorage.setItem("todos", item)
+                }
+
+                input.value = ""
+            })
+
+
+
+        })
+
+
+
+    </script>
+    
+    </head>
+
+
+    <body>
+
+        <div class="container">
+
+            <h2>Simple Todo</h2>
+
+            <form id="form" >
+
+                <input id="task" autocomplete="off"  maxlength="20" name="task" type="text" placeholder="Enter task name" />
+
+                <button id="add-task">Add Task</button>
+
+            </form>
+
+
+            <ul id="todo-list"></ul>
+
+        </div>
+
+    </body>
+
+
+
+</html>

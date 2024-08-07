@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>JQuery</title>
+    <script src="./jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <h1> Hello, World</h1>
+
+    <h1>Hello, 2</h1>
+
+    <p class="para1">Good morning</p>
+
+    <p id="para">Good Afternoon</p>
+
+    <button id="btn1">Click Me 1</button>
+
+    <button id="btn2">Click Me 2</button>
+
+
+    <button id="btn-f-1">FadeIn</button>
+
+    <button id="btn-f-2">Fade Out</button>
+
+
+    <p id="dbl">DBL</p>
+
+    
+</body>
+
+<script>
+
+    $("h1").css("color", "red")
+
+    $("#para").css("background-color", "blue")
+
+    $(".para1").html("Nothing")
+    $(".para1").addClass("my-class")
+
+    console.log($("button").offset())
+
+    $("#btn1").attr("name", "my-btn")
+
+    $("#btn1").click(function () {
+        $("#para").hide({duration: 1000})
+    })
+
+    $("#btn2").click(function () {
+        $("#para").show({duration: 1000})
+    })
+
+    console.log($("#para").html())
+
+    $("#btn-f-1").click(function () {
+        $("#para").fadeIn(2000)
+        //$("#para").fadeTo(2000, 0.3)
+    })
+
+    $("#btn-f-2").click(() => {
+        $("#para").fadeOut(2000)
+    })
+
+    $("#dbl").on("dblclick", ()=> {
+        $("#para").fadeToggle(2000)
+    })
+
+    $("#dbl").dblclick(()=> {
+        $("#para").fadeToggle(2000)
+    })
+
+    $(document).mousemove((e) => {
+        const mouseEvent = e.originalEvent
+        console.log(mouseEvent.offsetY, mouseEvent.offsetX)
+    })
+
+</script>
+
+</html>

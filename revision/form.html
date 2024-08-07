@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>DOM</title>
+
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-color: blue;">
+
+    <form>
+
+        <input type="text"  value="Hello" type="text" >
+
+        <input id="cb" type="checkbox" />
+
+        <button onclick="add()">Go</button>
+
+    </form>
+
+
+    <div id="parent" style="background-color: brown; padding: 100px">
+
+        <div id="child" style="background-color: blue;">Event</div>
+        
+    </div>
+
+    
+</body>
+
+<script>
+
+  const input = document.querySelector("input")
+
+  input.addEventListener("change", (event) => {
+  
+    console.log(input.value)
+    console.log(event.target.value)
+
+
+  })
+
+  const form = document.querySelector("form")
+
+
+  document.getElementById("cb").addEventListener("change", function(event) {
+    if (event.target.checked) {
+        form.style.backgroundColor = "red"
+        document.querySelector("#parent").classList.add("hide")
+    } else {
+        form.style.backgroundColor = "blue"
+        document.querySelector("#parent").classList.remove("hide")
+    }
+  })
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    alert("submit")
+
+    console.log(document.getElementById("cb").checked)
+
+    console.log(document.getElementById("cb").value)
+
+    form.reset()
+
+    form.value = ""
+
+  })
+
+  input.addEventListener("focus", () => {
+    console.log("Focus")
+  })
+
+  input.addEventListener("blur", () => {
+    console.log("Blur")
+  })
+
+
+    form.addEventListener("reset", () => {
+        alert("Reset")
+    })
+
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key == "w") {
+        document.body.style.backgroundColor = "red"
+    }
+    if (event.key == "x") {
+        document.body.style.backgroundColor = "green"
+    }
+  })
+
+  function add() {
+    document.addEventListener("keydown", function (event) {
+        console.log("up")
+    })
+  }
+
+
+  document.querySelector("#parent").addEventListener('click', () => {
+    alert("parent")
+  })
+
+  document.querySelector("#child").addEventListener('click', () => {
+    alert("child")
+  })
+
+
+</script>
+
+</html>

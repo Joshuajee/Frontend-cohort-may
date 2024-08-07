@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>DOM</title>
+    <style>
+        .color {
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: blue;">
+
+    Hello
+
+    <h1 id="heading">
+        Hello, World
+        <p>Test</p>
+    </h1>
+
+    <button onclick="hanleClick()">Click</button>
+
+    
+</body>
+
+<script>
+
+    document.body.style.backgroundColor = "red"
+
+    console.log(document.body.children)
+
+    const headingObj = document.querySelector("#heading")
+
+    console.log(headingObj)
+
+   // headingObj.textContent =  "Good morning"
+
+    console.log(headingObj.childNodes)
+
+    console.log(headingObj.parentElement)
+    
+
+    headingObj.setAttribute("id", "nothing")
+
+    function hanleClick() {
+        headingObj.classList.add("color")
+        headingObj.tagName =  "p"
+    }
+
+    const button = document.querySelector("button")
+
+    button.setAttribute("disabled", "true")
+
+    button.removeAttribute("disabled")    
+    
+
+</script>
+
+</html>

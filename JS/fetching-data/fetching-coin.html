@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Cats</title>
+</head>
+
+<body>
+
+
+    
+</body>
+
+<script type="text/javascript">
+
+    const fact = document.querySelector("#fact")
+
+    fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
+        .then(function (response) {
+            if (response.ok === true) {
+                return response.json()
+            }
+        }).then(function(result) {
+            console.log(result.disclaimer)
+            console.log(result.chartName)
+            console.log(result.bpi.USD.rate)
+        }).catch(function(error) {
+            console.log(error)
+            fact.textContent = "An Error occurred"
+        })
+  
+</script>
+
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body style="height: 1000px; overflow-y:scroll">
+
+    <button id="me">Click Me</button>
+
+
+</body>
+
+<script>
+
+    let total = 0
+
+    const meBtn = document.getElementById("me")
+
+    console.log("A")
+    console.log("B")
+    const doHeavyTask = new Promise(function(resolve, reject) {
+        setTimeout(function () {
+            console.log("START")
+            for (let i  = 0; i < 1000000000; i++) {
+                total += i 
+            }
+            resolve(total)
+        }, 0)
+
+        reject("Error occurred")
+    }) 
+
+    doHeavyTask
+        .then(function (name) {
+            console.log("Total",name)
+        }).catch(function(err) {
+            console.log(err)
+        })
+
+    console.log(total)
+    console.log("D")
+    console.log("E")
+    console.log(total)
+
+
+
+</script>
+
+</html>

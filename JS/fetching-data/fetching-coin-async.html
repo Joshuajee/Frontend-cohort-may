@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Cats</title>
+</head>
+
+<body>
+
+    <p id="setup"></p>
+    <p id="line"> </p>
+
+    <button onclick="makeAJoke()">Tell me a joke</button>
+
+    
+</body>
+
+<script type="text/javascript">
+
+    const normal = "Tell me a joke"
+
+    const setup = document.querySelector("#setup")
+    const punchLine = document.querySelector("#line")
+
+    const btn = document.querySelector("button")
+
+    async function makeAJoke() {
+        btn.textContent = "Loading..."
+        btn.setAttribute("disabled", "true")
+        const response = await fetch("https://official-joke-api.appspot.com/random_joke")
+
+        const result = await response.json()
+
+        setup.textContent = result.setup
+        punchLine.textContent = result.punchline
+
+        btn.textContent = normal
+        btn.removeAttribute("disabled")
+
+       
+    }
+  
+</script>
+
+
+</html>

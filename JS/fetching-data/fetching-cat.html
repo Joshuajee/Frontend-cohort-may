@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Cats</title>
+</head>
+
+<body>
+
+    <h1> Cats Facts </h1>
+
+    <p id="fact">Loading...</p>
+
+    <p id="length"></p>
+
+    
+</body>
+
+<script type="text/javascript">
+
+    const fact = document.querySelector("#fact")
+
+    fetch("https://catfact.ninja/fact")
+        .then(function (response) {
+            if (response.ok === true) {
+                return response.json()
+            }
+        }).then(function(result) {
+            console.log(result)
+            console.log(result.fact)
+            console.log(result.length)
+            fact.textContent = result.fact
+        }).catch(function(error) {
+            console.log(error)
+            fact.textContent = "An Error occurred"
+        })
+  
+</script>
+JSON
+
+</html>

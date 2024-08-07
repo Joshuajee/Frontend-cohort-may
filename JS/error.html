@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fuctions</title>
+</head>
+
+<body>
+
+    
+</body>
+
+<script>
+    console.log("Before Error")
+    try {
+        throw new Error("This is an error")
+        console.log("No Error")
+        const arr =  [1, 2]
+        console.log(arr[10].name)
+    } catch (e) {
+        console.log("Error")
+    } finally {
+        console.log("Done")
+    }
+    console.log("After Error")
+
+
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Fuctions</title>
+</head>
+
+<body>
+
+    
+</body>
+
+<script>
+
+    const person1 = {
+        id: "50",
+        name: "John Doe",
+        occupation: "Clark",
+        cars: ["Camry", "Mercedes"],
+        walk: function () {
+            console.log("Walking...")
+        },
+        speak: function(saySomething) {
+            console.log(saySomething)
+        }
+
+    }
+
+    console.log(person1.name)
+    console.log(person1.occupation)
+    console.log(person1.id)
+    console.log(person1.cars[0])
+
+    person1.occupation = "General Manager"
+
+    console.log(person1)
+
+    person1.cars.push("G Wagon")
+
+    console.log(person1.cars)
+
+    person1.walk()
+
+    person1.speak("Hello, World!")
+
+
+
+</script>
+
+</html>
